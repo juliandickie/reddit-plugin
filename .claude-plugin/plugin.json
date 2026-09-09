@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "reddit",
+  "version": "0.1.0",
+  "description": "Read Reddit through the official API for research and voice-of-customer mining. Activates for: (1) searching Reddit or named subreddits, (2) pulling a thread with its full comment tree, (3) browsing a subreddit, (4) reading one account's history, (5) exporting comments shaped for an Ultimate Message Map. Ships the `reddit` CLI, callable from any session or plugin. No MCP server.",
+  "author": { "name": "Julian Dickie" },
+  "license": "MIT",
+  "keywords": ["reddit", "voc", "research", "copywriting", "cli"]
+}

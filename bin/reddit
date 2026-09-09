@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# PATH wrapper. Execs the dedicated venv so callers never manage an environment.
+set -euo pipefail
+VENV="${REDDIT_PLUGIN_VENV:-$HOME/.local/share/reddit-plugin/venv}"
+if [ ! -x "$VENV/bin/python" ]; then
+  echo "reddit: venv missing at $VENV. Run scripts/install.sh from the repo." >&2
+  exit 127
+fi
+exec "$VENV/bin/python" -m reddit_cli "$@"
