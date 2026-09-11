@@ -3,7 +3,7 @@
 A CLI that reads Reddit through the official API. Read `README.md` for usage and
 `docs/superpowers/specs/2026-09-09-reddit-cli-design.md` for why it is shaped this way.
 Session state and open work live in the sibling repo:
-`~/code/youtube-plugin/SESSION-HANDOFF-2026-09-10.md`.
+`~/code/youtube-plugin/SESSION-HANDOFF-2026-09-11.md`.
 
 **STATUS 2026-09-11: complete but unusable, access request drafted, not yet filed.**
 Reddit's Responsible Builder Policy gates app creation behind an approval ticket, and

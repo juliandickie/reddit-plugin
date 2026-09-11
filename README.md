@@ -15,6 +15,15 @@ credentials you control, so that is what this uses.
 
 ## Install
 
+As a Claude Code plugin, from either of Julian's catalogs:
+
+```
+/plugin marketplace add juliandickie/outfit
+/plugin install reddit@outfit
+```
+
+Or straight from the repo, which is also how the plugin's own scripts set up the CLI:
+
 ```bash
 bash scripts/install.sh
 ```
