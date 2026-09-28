@@ -50,6 +50,25 @@ Nothing in them claims the use is personal or non-commercial, and nothing hides 
 business uses it; that is the line that keeps the account safe whichever way Reddit
 rules.
 
+**Amended 2026-09-27, at Julian's request - agency research added.** The 11 September
+draft described dentistry research for iDD only. Only one ticket is allowed per use
+case, and the policy requires transparency about why data is accessed, so the ticket
+now covers every intended use:
+- tool and service research for Pro Marketing's own operations (the first real use,
+  the DMARC monitoring decision of 2026-09-26)
+- customer-language research in a client's category
+- the original iDD dental education research
+
+The "current use" answer is also corrected. The draft said no Reddit data had been
+collected, which stopped being true on 2026-09-26 when an Apify scrape (trudax/reddit-scraper-lite)
+ran for the DMARC research. Filing the old line would misrepresent how the data was
+accessed, which is the exact breach the policy names.
+
+The wider scope also strengthens the finding above: client-facing agency work is
+plainly commercial, and the developer track fits it less well than it fitted the
+original draft. The track choice stays Julian's. The answers below are still written
+to be true on either form.
+
 ## Draft answers, written to be true on either track
 
 **Subject of inquiry**
@@ -68,29 +87,49 @@ julian@promarketing.co
 https://promarketing.co
 
 **Company description, including industries served and locations**
-A small Australian marketing agency in Brisbane. Clients are professional-services and
-education businesses, principally the Institute of Digital Dentistry, an online dental
-education company serving dentists in Australia, New Zealand, Canada and the US.
+A small Australian web and marketing agency in Brisbane and Bundaberg, Queensland. It
+builds websites, runs search, advertising and email marketing, and monitors the
+technical health of client websites and email domains. Clients are local and
+professional-services businesses in Australia, and an online dental education
+company, the Institute of Digital Dentistry, serving dentists in Australia, New
+Zealand, Canada and the US.
 
 **Company size**
 Under 20 people.
 
 **Your current use of Reddit data**
-None. Every previous attempt to read Reddit content has been through official
-surfaces (the public site, a third-party MCP connector) and all of them are now
-blocked, so no data has been collected. This request is for first access.
+In September 2026, before filing this request, we used a third-party scraping service
+(Apify) for one research pass. It read public posts and comments about email
+authentication tools, in subreddits such as r/msp and r/sysadmin, to inform an internal
+decision about which tool to use. Before that, every attempt to read Reddit went
+through the public site or a third-party connector, and those are now blocked. We are
+asking for API access so that future research goes through the sanctioned route
+instead.
 
 **What is the purpose of your product or service?**
-An internal command-line tool that reads public Reddit threads and comments so we can
-understand, in customers' own words, what dentists say about learning digital
-dentistry: the frustrations, the questions, the language they use. It is one input
-into how we write educational material and describe courses. Nothing is built for
-resale, nothing is republished, and no Reddit content appears in any product.
+An internal command-line tool that reads public Reddit threads and comments for three
+kinds of research. All of it is read-only and small in volume.
+1. Choosing tools and services. We read practitioner discussions (IT administration,
+   email deliverability, web hosting, self-hosting, marketing operations) when we choose
+   the software we run or recommend to clients. An example is how agencies monitor
+   email authentication (DMARC) across many client domains.
+2. Customer language for a client's category. Before we write for a client, we read
+   what customers in that category ask and complain about, for example first-home
+   buyers, landlords or people seeking acupuncture. That way the website and
+   educational material answer real questions in plain words.
+3. Dental education. We read what dentists say about learning digital dentistry, to
+   shape course descriptions and educational material for the Institute of Digital
+   Dentistry.
+It does not monitor brands, track individuals, profile users, or collect personal
+data. Nothing is built for resale, nothing is republished, and no Reddit content
+appears in any product.
 
 **What will you deliver to your users/customers with Reddit data?**
-Nothing containing Reddit data. The output is internal research notes summarising
-themes, used by our own writers. No Reddit content, usernames, or derived data is
-distributed, licensed, displayed, or sold, and nothing is used to train any model.
+Nothing containing Reddit data. The output is internal research notes that summarise
+themes, used by our own staff. Work delivered to clients (web pages, advice, reports)
+is our own writing informed by those themes. It contains no Reddit posts, quotes,
+usernames or derived datasets. No Reddit content or derived data is distributed,
+licensed, displayed or sold, and nothing is used to train any model.
 
 **Please describe what you are planning to distribute, where it will be distributed
 and expected audience.**
@@ -98,9 +137,11 @@ Nothing is distributed. Reads stay on one machine as local files with an audit o
 was read and why, retained only while the research question is open.
 
 **Provide a detailed description of what the app will be doing on the Reddit platform**
-Read-only. Searches public subreddits (dentistry-related, for example r/Dentistry and
-r/dentaltechnology), fetches individual public threads with their comment trees, and
-saves them locally. It never posts, comments, votes, messages, or acts as an account.
+Read-only. Searches public subreddits chosen per research question (for example
+r/msp, r/sysadmin, r/emailmarketing and r/selfhosted for tool research, category
+communities such as r/AusFinance or r/AusProperty for a client's customers, and
+r/Dentistry and r/dentaltechnology for dental education). Fetches individual public
+threads with their comment trees and saves them locally. It never posts, comments, votes, messages, or acts as an account.
 Authentication is OAuth with read-only scopes. Volume is small: a research pass is
 tens of threads, well under 100 requests per minute and typically a few hundred
 requests per day at most.
@@ -116,15 +157,18 @@ local research reader that pulls a handful of public threads into a file on one
 machine, so there is no in-Reddit surface for it and no audience of Redditors.
 
 **What subreddits do you intend to use the bot/app in?**
-It reads only. Subreddits searched will be dentistry and dental-technology
-communities, chosen per research question.
+It reads only, and posts in none. Subreddits are chosen per research question: IT
+administration, email and marketing-operations communities for tool research;
+consumer and category communities for a client's customers (property, finance,
+health, trades); and dentistry and dental-technology communities for education.
 
 **If applicable, what username will you be operating this app under?**
 Julian's own account, read-only, no posting.
 
 **What benefit/purpose will the app have for Redditors?**
 None directly, and this answer should not pretend otherwise. It reads public posts so
-that educational material aimed at dentists is written in the words they actually use.
+that the websites, advice and educational material we write answer the questions
+people actually ask, in the words they actually use.
 
 **What is your data budget?**
 None allocated. If access carries a fee, tell us the number and we will decide whether
@@ -134,8 +178,12 @@ the research question justifies it.
 
 - Do not describe the tool as personal, hobby, or non-commercial. It is used by a
   business.
-- Do not mention client brand monitoring beyond the general description above unless
-  asked; it is true but it is not what the tool has been built or used for yet.
+- Do not add brand monitoring, reputation tracking or social listening for clients to
+  the ticket. The tool is not built or used for any of them. If that ever changes, it
+  is a new use case that needs Reddit's agreement first, not a quiet extension of
+  this one.
+- Do not file with the "current use" answer out of date. If more research has run
+  through Apify or anything else since 2026-09-27, say so.
 - Do not file more than one ticket. The policy treats duplicate requests for the same
   use case as a breach.
 - Do not tick the researcher checkbox. That track is for academic institutions.
