@@ -13,7 +13,7 @@ refuses with a pointer to `reddit doctor`. Nothing to fix in code.
 The ticket text is ready at `docs/reddit-api-access-request-2026-09-11.md`, with the
 live form's three tracks mapped and the policy lines that matter quoted. Julian chose
 the developer track with honest answers (a business uses it, read-only, small volume).
-When he files it, record the ticket number and date here. Do not draft a second
+Amended 2026-09-27 at Julian's request to cover Pro Marketing's agency research (tool research, and customer language for a client's category) as well as iDD, and to disclose the one-off Apify scrape of 2026-09-26 in the "current use" answer (the wider scope fits the commercial track better; the track stays Julian's call). Keep that answer current before filing. When he files it, record the ticket number and date here. Do not draft a second
 ticket for the same use case; the policy names duplicates as a breach.
 
 ## Rules specific to this repo
